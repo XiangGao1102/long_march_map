@@ -1,0 +1,28 @@
+
+/* V160：仅移动/触摸设备启用。内容、尺寸、交互不变。 */
+@media (pointer: coarse), (hover: none) {
+  /* 左侧导航栏单独进入合成层，展开/收起时避免整页反复重绘。 */
+  .left-rail {
+    will-change: transform, scroll-position !important;
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+    contain: layout paint style !important;
+  }
+
+  /* 原本面板背景接近不透明，实时 backdrop blur 肉眼收益很小，
+     但在手机上会显著增加滚动/滑动时的 GPU 重采样成本。 */
+  .left-rail > .glass-panel,
+  .left-rail .glass-panel {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* 让滚动列表自身隔离，减少滚动时影响外围布局。 */
+  .left-rail .route-overview__nodes ol {
+    contain: layout paint !important;
+  }
+
+  #scene canvas {
+    will-change: transform;
+  }
+}

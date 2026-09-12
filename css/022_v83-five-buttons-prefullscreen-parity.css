@@ -1,0 +1,38 @@
+
+/* 五个文字按钮统一字号。通过减少路线按钮内部留白，把空间让给文字本身。 */
+#app:not(.is-map-focus) .commandbar .route-tab,
+#app:not(.is-map-focus) .commandbar.v76-fit .route-tab,
+#app:not(.is-map-focus) .commandbar.v76-stack .route-tab,
+#app:not(.is-map-focus) .commandbar #route-toggle {
+  font-size: 14.5px !important;
+  font-weight: 650 !important;
+  letter-spacing: 0 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+#app:not(.is-map-focus) .commandbar .route-tab {
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+  gap: 2px !important;
+}
+#app:not(.is-map-focus) .commandbar .route-tab i {
+  width: 4px !important;
+  height: 4px !important;
+}
+#app:not(.is-map-focus) .commandbar #route-toggle {
+  min-width: 88px !important;
+  padding-left: 7px !important;
+  padding-right: 7px !important;
+}
+/* 主标题继续明显高于五个按钮。 */
+#app:not(.is-map-focus) .commandbar .brand-lockup h1 {
+  font-size: 24px !important;
+}
+/* 极窄横屏只统一降一档，五个按钮仍保持完全相同。 */
+@media (max-width: 760px), (max-height: 430px) {
+  #app:not(.is-map-focus) .commandbar .route-tab,
+  #app:not(.is-map-focus) .commandbar #route-toggle {
+    font-size: 13.8px !important;
+  }
+  #app:not(.is-map-focus) .commandbar #route-toggle { min-width: 84px !important; }
+}

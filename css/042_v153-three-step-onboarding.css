@@ -1,0 +1,168 @@
+
+/* V153：初始界面三步串联提示。只负责引导与中央红军路线的首次启动门槛。 */
+body.lm-onboarding-active { overflow: hidden !important; }
+
+#lm-three-step-guide {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  color: #eefefe;
+  font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  opacity: 1;
+  transition: opacity .24s ease;
+  pointer-events: auto;
+}
+#lm-three-step-guide[hidden] { display: none !important; }
+#lm-three-step-guide.is-leaving { opacity: 0; pointer-events: none; }
+
+.lm-guide-focus {
+  position: fixed;
+  z-index: 1;
+  border: 1px solid rgba(81, 236, 239, .9);
+  border-radius: 18px;
+  background: rgba(26, 225, 229, .035);
+  box-shadow:
+    0 0 0 9999px rgba(0, 10, 15, .82),
+    0 0 0 4px rgba(39, 208, 213, .12),
+    0 0 34px rgba(48, 230, 232, .42),
+    inset 0 0 26px rgba(36, 210, 214, .08);
+  transition: left .34s ease, top .34s ease, width .34s ease, height .34s ease, border-radius .34s ease;
+  pointer-events: none;
+}
+
+.lm-guide-card {
+  position: fixed;
+  z-index: 3;
+  width: min(460px, calc(100vw - 34px));
+  max-height: calc(100vh - 30px);
+  overflow: auto;
+  padding: 25px 28px 22px;
+  border: 1px solid rgba(76, 226, 230, .58);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(6, 32, 37, .97), rgba(2, 20, 25, .96));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .52), 0 0 40px rgba(30, 208, 212, .15), inset 0 1px rgba(255, 255, 255, .06);
+  backdrop-filter: blur(18px) saturate(1.15);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+}
+.lm-guide-card.is-centered { left: 50%; top: 50%; transform: translate(-50%, -50%); }
+
+.lm-guide-card__eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 9px;
+  color: #55e5e9;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+.lm-guide-card__eyebrow span:last-child { color: rgba(214, 244, 244, .54); letter-spacing: .08em; }
+.lm-guide-card h2 {
+  margin: 0;
+  color: #f5ffff;
+  font-size: clamp(23px, 2.2vw, 31px);
+  line-height: 1.22;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.lm-guide-card__lead {
+  margin: 9px 0 18px;
+  color: rgba(222, 246, 246, .7);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.lm-guide-card__items { display: grid; gap: 10px; margin: 0 0 21px; }
+.lm-guide-card__item {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 8px 11px;
+  border: 1px solid rgba(80, 219, 223, .11);
+  border-radius: 12px;
+  background: rgba(79, 218, 222, .045);
+  color: rgba(230, 249, 249, .82);
+  font-size: 15px;
+  line-height: 1.45;
+}
+.lm-guide-card__icon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 10px;
+  color: #53e6ea;
+  background: rgba(50, 211, 216, .09);
+  font-size: 19px;
+  font-weight: 500;
+}
+.lm-guide-card__item strong { display: block; color: #efffff; font-weight: 600; }
+.lm-guide-card__item small { display: block; margin-top: 2px; color: rgba(211, 239, 239, .58); font-size: 12px; }
+.lm-guide-card__footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.lm-guide-card__dots { display: flex; align-items: center; gap: 7px; }
+.lm-guide-card__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(183, 223, 224, .24);
+  transition: width .22s ease, background .22s ease, box-shadow .22s ease;
+}
+.lm-guide-card__dot.is-active { width: 22px; background: #51e3e7; box-shadow: 0 0 14px rgba(81, 227, 231, .52); }
+.lm-guide-card__ack {
+  min-width: 132px;
+  min-height: 44px;
+  padding: 0 20px;
+  border: 1px solid rgba(89, 238, 240, .74);
+  border-radius: 12px;
+  color: #eaffff;
+  background: linear-gradient(135deg, rgba(17, 143, 149, .95), rgba(9, 95, 101, .96));
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .26), inset 0 1px rgba(255, 255, 255, .12);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .18s ease, border-color .18s ease, filter .18s ease;
+}
+.lm-guide-card__ack:hover, .lm-guide-card__ack:focus-visible {
+  border-color: #9cffff;
+  filter: brightness(1.12);
+  outline: none;
+  transform: translateY(-1px);
+}
+.lm-guide-card__ack:active { transform: translateY(1px); }
+
+@media (max-height: 560px) {
+  .lm-guide-card { width: min(430px, calc(100vw - 28px)); padding: 17px 20px 15px; border-radius: 17px; }
+  .lm-guide-card__lead { margin: 5px 0 10px; line-height: 1.5; }
+  .lm-guide-card__items { gap: 6px; margin-bottom: 12px; }
+  .lm-guide-card__item { min-height: 38px; padding: 5px 9px; font-size: 13px; }
+  .lm-guide-card__icon { width: 31px; height: 31px; font-size: 16px; }
+  .lm-guide-card__ack { min-height: 38px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #lm-three-step-guide, .lm-guide-focus, .lm-guide-card__dot, .lm-guide-card__ack { transition: none !important; }
+}
+
+
+/* V167 — 三步首屏提示从第一帧开始属于 #app 横屏坐标系。
+   当手机竖持、#app 被 rotate(90deg) 时，引导层随作品一起旋转，
+   不再出现“第一条提示先竖屏显示”的情况。 */
+#app > #lm-three-step-guide {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+#app > #lm-three-step-guide .lm-guide-focus,
+#app > #lm-three-step-guide .lm-guide-card {
+  position: absolute !important;
+}
+
+html.force-css-landscape #app > #lm-three-step-guide .lm-guide-card {
+  width: min(460px, calc(var(--lm-landscape-width) - 34px));
+  max-height: calc(var(--lm-landscape-height) - 30px);
+}

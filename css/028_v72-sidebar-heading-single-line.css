@@ -1,0 +1,15 @@
+
+/* V72 — “长征历程 / 路线 01 / 03”单行平衡优化 */
+.route-overview__eyebrow {
+  font-size: 11px !important;
+  line-height: 1.2 !important;
+  letter-spacing: .055em !important;
+  white-space: nowrap !important;
+}
+
+#overview-kicker {
+  font-size: 11px !important;
+  line-height: 1.2 !important;
+  letter-spacing: .035em !important;
+  white-space: nowrap !important;
+}

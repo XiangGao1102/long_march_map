@@ -1,0 +1,113 @@
+
+  /* V154: keep the existing onboarding interaction, but make its card compact
+     enough to leave the highlighted control visible on desktop and landscape. */
+  #long-march-bgm-toggle {
+    display: none !important;
+  }
+
+  .lm-guide-card {
+    width: min(350px, calc(100vw - 28px)) !important;
+    max-height: calc(100vh - 24px) !important;
+    padding: 16px 18px 14px !important;
+    border-radius: 16px !important;
+  }
+
+  .lm-guide-card__eyebrow {
+    margin-bottom: 5px !important;
+    font-size: 10px !important;
+  }
+
+  .lm-guide-card h2 {
+    font-size: clamp(19px, 1.8vw, 24px) !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  .lm-guide-card__lead {
+    margin: 5px 0 10px !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+
+  .lm-guide-card__items {
+    gap: 6px !important;
+    margin-bottom: 11px !important;
+  }
+
+  .lm-guide-card__item {
+    grid-template-columns: 30px minmax(0, 1fr) !important;
+    gap: 8px !important;
+    min-height: 34px !important;
+    padding: 5px 8px !important;
+    border-radius: 9px !important;
+    font-size: 12.5px !important;
+  }
+
+  .lm-guide-card__icon {
+    width: 29px !important;
+    height: 29px !important;
+    border-radius: 8px !important;
+    font-size: 15px !important;
+  }
+
+  .lm-guide-card__item small {
+    margin-top: 0 !important;
+    font-size: 10.5px !important;
+  }
+
+  .lm-guide-card__footer {
+    gap: 10px !important;
+  }
+
+  .lm-guide-card__ack {
+    min-width: 105px !important;
+    min-height: 34px !important;
+    padding: 0 13px !important;
+    border-radius: 9px !important;
+    font-size: 12px !important;
+  }
+
+  .lm-guide-card__dot {
+    width: 6px !important;
+    height: 6px !important;
+  }
+
+  .lm-guide-card__dot.is-active {
+    width: 18px !important;
+  }
+
+  @media (max-height: 560px) {
+    .lm-guide-card {
+      width: min(330px, calc(100vw - 24px)) !important;
+      padding: 12px 14px 11px !important;
+    }
+
+    .lm-guide-card__lead {
+      margin-bottom: 7px !important;
+    }
+
+    .lm-guide-card__items {
+      gap: 4px !important;
+      margin-bottom: 8px !important;
+    }
+
+    .lm-guide-card__item {
+      min-height: 30px !important;
+      padding: 3px 7px !important;
+    }
+
+    .lm-guide-card__icon {
+      width: 26px !important;
+      height: 26px !important;
+    }
+
+    .lm-guide-card__ack {
+      min-height: 32px !important;
+    }
+  }
+
+
+/* V167: compact guide also uses logical landscape dimensions in CSS-rotated mode. */
+html.force-css-landscape #app > #lm-three-step-guide .lm-guide-card {
+  width: min(350px, calc(var(--lm-landscape-width) - 28px)) !important;
+  max-height: calc(var(--lm-landscape-height) - 24px) !important;
+}

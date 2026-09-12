@@ -1,0 +1,76 @@
+
+/* 仅优化顶栏空间；路线栏目字号不变。 */
+.commandbar {
+  grid-template-columns: minmax(330px, 1.18fr) auto minmax(150px, .58fr);
+  gap: 12px;
+}
+.route-switch { padding-left: 2px; padding-right: 2px; }
+.route-tab {
+  padding-left: 8px;
+  padding-right: 8px;
+  gap: 4px;
+}
+.route-tab i { width: 5px; height: 5px; }
+.brand-lockup { gap: 10px; }
+.brand-lockup h1 {
+  font-size: 23px;
+  letter-spacing: .035em;
+  white-space: nowrap;
+}
+
+@media (orientation: landscape) and (max-width: 1180px),
+       (orientation: portrait) and (max-height: 1180px) {
+  .commandbar {
+    grid-template-columns: minmax(290px, 1.08fr) auto minmax(135px, .48fr);
+    gap: 8px;
+  }
+  .route-tab { padding-left: 6px; padding-right: 6px; gap: 3px; }
+  .brand-lockup h1 { font-size: 21px; white-space: nowrap; }
+}
+
+@media (orientation: landscape) and (max-width: 900px),
+       (orientation: portrait) and (max-height: 900px) {
+  .commandbar { grid-template-columns: minmax(245px, 1fr) auto; }
+  .route-switch {
+    justify-self: start;
+    width: auto;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .route-tab {
+    flex: 0 0 auto;
+    min-width: 0;
+    padding-left: 9px;
+    padding-right: 9px;
+    gap: 3px;
+  }
+  .brand-lockup h1 {
+    max-width: none;
+    font-size: 20px;
+    line-height: 1.15;
+    white-space: nowrap;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 680px),
+       (orientation: portrait) and (max-height: 680px) {
+  .brand-star { width: 32px; height: 32px; }
+  .brand-lockup { gap: 7px; }
+  .brand-lockup h1 {
+    max-width: none;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+  .route-tab {
+    min-width: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    gap: 2px;
+  }
+}
+
+/* V62 — 省名始终保留；红四方面军使用深蓝色，与水系明确区分 */
+.province-label {
+  display: block;
+}
+

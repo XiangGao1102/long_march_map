@@ -1,0 +1,430 @@
+{
+  "source": "最终版.html",
+  "source_bytes": 28188695,
+  "index_bytes": 24606,
+  "css_files": 43,
+  "js_files": 22,
+  "data_scripts_preserved": 1,
+  "image_files": 73,
+  "audio_files": 2,
+  "images": [
+    {
+      "file": "img_fd1c4c27fc0c8351.png",
+      "mime": "image/png",
+      "bytes": 33300
+    },
+    {
+      "file": "img_e56e1e7c20cd17f9.webp",
+      "mime": "image/webp",
+      "bytes": 140076
+    },
+    {
+      "file": "img_14badf255eaf4642.webp",
+      "mime": "image/webp",
+      "bytes": 14892
+    },
+    {
+      "file": "img_6ffb29f8fa125376.webp",
+      "mime": "image/webp",
+      "bytes": 156158
+    },
+    {
+      "file": "img_5ff6606d5dd8f031.webp",
+      "mime": "image/webp",
+      "bytes": 162926
+    },
+    {
+      "file": "img_5d64d29a2049ffe9.webp",
+      "mime": "image/webp",
+      "bytes": 72684
+    },
+    {
+      "file": "img_2890208d2db08144.webp",
+      "mime": "image/webp",
+      "bytes": 120572
+    },
+    {
+      "file": "img_e7f25265fe366f12.jpg",
+      "mime": "image/jpeg",
+      "bytes": 59742
+    },
+    {
+      "file": "img_876e587cd0e9aa69.webp",
+      "mime": "image/webp",
+      "bytes": 48946
+    },
+    {
+      "file": "img_6ff306330fc34bf8.webp",
+      "mime": "image/webp",
+      "bytes": 140942
+    },
+    {
+      "file": "img_57cd404627772972.webp",
+      "mime": "image/webp",
+      "bytes": 168608
+    },
+    {
+      "file": "img_08e61186804d240f.webp",
+      "mime": "image/webp",
+      "bytes": 127028
+    },
+    {
+      "file": "img_28872b9cbb8fe798.webp",
+      "mime": "image/webp",
+      "bytes": 120960
+    },
+    {
+      "file": "img_78fceacf4bd00173.webp",
+      "mime": "image/webp",
+      "bytes": 60960
+    },
+    {
+      "file": "img_24ce9b88f38ccdd1.webp",
+      "mime": "image/webp",
+      "bytes": 151694
+    },
+    {
+      "file": "img_e3ae9e4d419e9d64.webp",
+      "mime": "image/webp",
+      "bytes": 104764
+    },
+    {
+      "file": "img_7e2185f1845e02c3.jpg",
+      "mime": "image/jpeg",
+      "bytes": 210916
+    },
+    {
+      "file": "img_7c2fb8301b024385.jpg",
+      "mime": "image/jpeg",
+      "bytes": 131549
+    },
+    {
+      "file": "img_845556fc137a3adc.webp",
+      "mime": "image/webp",
+      "bytes": 142176
+    },
+    {
+      "file": "img_bf7b50906a733e07.webp",
+      "mime": "image/webp",
+      "bytes": 232706
+    },
+    {
+      "file": "img_5df26488618ac237.webp",
+      "mime": "image/webp",
+      "bytes": 76016
+    },
+    {
+      "file": "img_b4a87a9e3cc5c44b.webp",
+      "mime": "image/webp",
+      "bytes": 39460
+    },
+    {
+      "file": "img_1d689a75414afde7.webp",
+      "mime": "image/webp",
+      "bytes": 63510
+    },
+    {
+      "file": "img_2d597ad95d1b07e0.webp",
+      "mime": "image/webp",
+      "bytes": 63090
+    },
+    {
+      "file": "img_98cdcaf39ff98e1a.jpg",
+      "mime": "image/jpeg",
+      "bytes": 38227
+    },
+    {
+      "file": "img_6c8af650db16803d.webp",
+      "mime": "image/webp",
+      "bytes": 43180
+    },
+    {
+      "file": "img_24b52c3ef4124c55.webp",
+      "mime": "image/webp",
+      "bytes": 84676
+    },
+    {
+      "file": "img_500c515985ffa332.webp",
+      "mime": "image/webp",
+      "bytes": 39954
+    },
+    {
+      "file": "img_a90aab8d5a26a277.webp",
+      "mime": "image/webp",
+      "bytes": 71920
+    },
+    {
+      "file": "img_bc30bd092d0a63a6.webp",
+      "mime": "image/webp",
+      "bytes": 41888
+    },
+    {
+      "file": "img_aa3a7ea1264b16b0.webp",
+      "mime": "image/webp",
+      "bytes": 250364
+    },
+    {
+      "file": "img_e5cbae38420efbe6.webp",
+      "mime": "image/webp",
+      "bytes": 46458
+    },
+    {
+      "file": "img_9aeba3b8eca7d513.webp",
+      "mime": "image/webp",
+      "bytes": 126306
+    },
+    {
+      "file": "img_8a844b2fb978aab7.webp",
+      "mime": "image/webp",
+      "bytes": 143478
+    },
+    {
+      "file": "img_cb82a4554794447b.webp",
+      "mime": "image/webp",
+      "bytes": 161720
+    },
+    {
+      "file": "img_cfe91f3f0506d4b3.webp",
+      "mime": "image/webp",
+      "bytes": 71938
+    },
+    {
+      "file": "img_919be0bba6dcade0.jpg",
+      "mime": "image/jpeg",
+      "bytes": 36065
+    },
+    {
+      "file": "img_b15fb0310073ca50.jpg",
+      "mime": "image/jpeg",
+      "bytes": 223704
+    },
+    {
+      "file": "img_ae2839e1f25b7b84.webp",
+      "mime": "image/webp",
+      "bytes": 39460
+    },
+    {
+      "file": "img_3a047c3ba29c0a82.webp",
+      "mime": "image/webp",
+      "bytes": 237210
+    },
+    {
+      "file": "img_a204a32795ce9f34.webp",
+      "mime": "image/webp",
+      "bytes": 120152
+    },
+    {
+      "file": "img_6bca3eef36ddb864.webp",
+      "mime": "image/webp",
+      "bytes": 131976
+    },
+    {
+      "file": "img_757a1466e803f55b.webp",
+      "mime": "image/webp",
+      "bytes": 104300
+    },
+    {
+      "file": "img_309e929f1c073d34.webp",
+      "mime": "image/webp",
+      "bytes": 124752
+    },
+    {
+      "file": "img_029ccf2df45f69cb.webp",
+      "mime": "image/webp",
+      "bytes": 174374
+    },
+    {
+      "file": "img_f75ceb21c18541e3.webp",
+      "mime": "image/webp",
+      "bytes": 71342
+    },
+    {
+      "file": "img_ff83c1bcca5e78b7.webp",
+      "mime": "image/webp",
+      "bytes": 143526
+    },
+    {
+      "file": "img_b751f1d9fe6a2bbf.webp",
+      "mime": "image/webp",
+      "bytes": 233802
+    },
+    {
+      "file": "img_27b4b9f9933a6641.webp",
+      "mime": "image/webp",
+      "bytes": 74600
+    },
+    {
+      "file": "img_9cbcabfe52636b8b.webp",
+      "mime": "image/webp",
+      "bytes": 74126
+    },
+    {
+      "file": "img_efd4754a3cb896f1.webp",
+      "mime": "image/webp",
+      "bytes": 79976
+    },
+    {
+      "file": "img_8dffa0026ce13451.webp",
+      "mime": "image/webp",
+      "bytes": 61948
+    },
+    {
+      "file": "img_2a30622dcfbd5af3.webp",
+      "mime": "image/webp",
+      "bytes": 157732
+    },
+    {
+      "file": "img_80cab3cd0eeb8a12.webp",
+      "mime": "image/webp",
+      "bytes": 41016
+    },
+    {
+      "file": "img_ca28c8a15f841780.webp",
+      "mime": "image/webp",
+      "bytes": 85022
+    },
+    {
+      "file": "img_f0c7f756f9fae003.webp",
+      "mime": "image/webp",
+      "bytes": 49560
+    },
+    {
+      "file": "img_4c7e5523ba9ed884.webp",
+      "mime": "image/webp",
+      "bytes": 56262
+    },
+    {
+      "file": "img_b7c171d5e33a15cb.webp",
+      "mime": "image/webp",
+      "bytes": 74888
+    },
+    {
+      "file": "img_dadf8880577ac483.webp",
+      "mime": "image/webp",
+      "bytes": 17984
+    },
+    {
+      "file": "img_13d07ca24a30c60a.webp",
+      "mime": "image/webp",
+      "bytes": 248860
+    },
+    {
+      "file": "img_0554c7d7db0ea06d.webp",
+      "mime": "image/webp",
+      "bytes": 119470
+    },
+    {
+      "file": "img_c2622b3190b7d067.webp",
+      "mime": "image/webp",
+      "bytes": 162926
+    },
+    {
+      "file": "img_9f1ca57e132c15fa.webp",
+      "mime": "image/webp",
+      "bytes": 42054
+    },
+    {
+      "file": "img_59b9a770c8f3f403.webp",
+      "mime": "image/webp",
+      "bytes": 42338
+    },
+    {
+      "file": "img_54f3852c3e2197ae.webp",
+      "mime": "image/webp",
+      "bytes": 141040
+    },
+    {
+      "file": "img_b86b1d9c93ca94de.webp",
+      "mime": "image/webp",
+      "bytes": 88336
+    },
+    {
+      "file": "img_e4fda6fb7bdaea44.webp",
+      "mime": "image/webp",
+      "bytes": 43182
+    },
+    {
+      "file": "img_7bbdfb392951b1b4.webp",
+      "mime": "image/webp",
+      "bytes": 36208
+    },
+    {
+      "file": "img_ace844254d136c5e.webp",
+      "mime": "image/webp",
+      "bytes": 73228
+    },
+    {
+      "file": "img_44424d7aec48bb75.jpg",
+      "mime": "image/jpeg",
+      "bytes": 98494
+    },
+    {
+      "file": "img_7dab67df1fac9077.jpg",
+      "mime": "image/jpeg",
+      "bytes": 340405
+    },
+    {
+      "file": "img_ee417f68e80f4e02.webp",
+      "mime": "image/webp",
+      "bytes": 67668
+    },
+    {
+      "file": "img_aaff512d2e35fde3.webp",
+      "mime": "image/webp",
+      "bytes": 4767774
+    }
+  ],
+  "audio": [
+    {
+      "file": "audio_5d5e534d3c7100ed.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 3279441
+    },
+    {
+      "file": "audio_4e1692b9aa9b27ad.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 1217451,
+      "source_id": "long-march-bgm-data"
+    }
+  ],
+  "file_protocol_compatibility": {
+    "enabled": true,
+    "critical_fallback_assets": [
+      "assets/images/img_7dab67df1fac9077.jpg",
+      "assets/images/img_ee417f68e80f4e02.webp",
+      "assets/images/img_e56e1e7c20cd17f9.webp"
+    ],
+    "cloud_behavior": "Uses external split assets",
+    "file_behavior": "Uses embedded fallback only for Canvas/WebGL critical textures"
+  },
+  "mobile_display_v166_v167": {
+    "onboarding_landscape_from_first_frame": true,
+    "ios_visual_viewport_safe_canvas": true,
+    "ios_visual_viewport_tracks_resize_and_scroll": true,
+    "other_functionality_changed": false
+  },
+  "v168_all_routes_label_rule": {
+    "single_route": "show current event name",
+    "all_routes": "hide event names",
+    "other_changes": false
+  },
+  "v169_ios_immersive_landscape_fix": {
+    "enabled": true,
+    "inherits_css_landscape": true,
+    "uses_ios_visual_viewport_safe_canvas": true,
+    "physical_landscape_guard_disabled_only_in_ios_css_landscape": true,
+    "other_functionality_changed": false
+  },
+  "v170_ios_immersive_android_parity": {
+    "enabled": true,
+    "android_landscape_css_parity": true,
+    "ios_map_asset": "assets/images/img_aaff512d2e35fde3_ios.webp",
+    "ios_map_dimensions": [
+      3264,
+      1928
+    ],
+    "source_content_same": true,
+    "remeasure_after_decode": true,
+    "other_functionality_changed": false
+  }
+}

@@ -1,0 +1,29 @@
+
+@media (pointer: coarse), (hover: none) {
+  /* 导航滚动只重绘自身，不把玻璃面板外的整页带入重绘。 */
+  .left-rail,
+  .left-rail .route-overview,
+  .left-rail .route-overview__nodes,
+  .left-rail .route-overview__nodes ol {
+    contain: layout paint style !important;
+  }
+
+  .left-rail {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  /* 节点详情的超长内容仅在自身范围内布局/绘制。 */
+  .node-detail,
+  .node-detail__scroll,
+  .history-media-gallery {
+    contain: layout paint style;
+  }
+}
+
+/* 2D沉浸地图关闭后的休眠状态继续完全退出合成树。 */
+#immersive-map-experience.is-runtime-suspended {
+  display: none !important;
+  content-visibility: hidden !important;
+  contain: strict !important;
+}

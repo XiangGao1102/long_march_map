@@ -1,7 +1,0 @@
-
-/* V58: remove redundant portrait +/- controls; native touch/pinch map interaction remains unchanged. */
-#portrait-zoom-in,
-#portrait-zoom-out,
-.portrait-map-zoom {
-  display: none !important;
-}

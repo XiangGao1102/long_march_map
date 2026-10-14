@@ -1,0 +1,59 @@
+
+/* 顶栏保持单行，但恢复接近原始本地版的字号，不再用 clamp 把文字压小。 */
+#app:not(.is-map-focus) .commandbar,
+#app:not(.is-map-focus) .commandbar.v76-fit,
+#app:not(.is-map-focus) .commandbar.v76-stack {
+  grid-template-columns: minmax(205px, 27vw) minmax(0, 1fr) max-content !important;
+  column-gap: 6px !important;
+}
+#app:not(.is-map-focus) .commandbar .brand-lockup h1,
+#app:not(.is-map-focus) .commandbar.v76-fit .brand-lockup h1,
+#app:not(.is-map-focus) .commandbar.v76-stack .brand-lockup h1 {
+  font-size: 19px !important;
+  line-height: 1.12 !important;
+  letter-spacing: .025em !important;
+}
+#app:not(.is-map-focus) .commandbar .route-tab,
+#app:not(.is-map-focus) .commandbar.v76-fit .route-tab,
+#app:not(.is-map-focus) .commandbar.v76-stack .route-tab,
+#app:not(.is-map-focus) .commandbar #route-toggle,
+#app:not(.is-map-focus) .commandbar.v76-fit #route-toggle,
+#app:not(.is-map-focus) .commandbar.v76-stack #route-toggle {
+  font-size: 13px !important;
+  line-height: 1 !important;
+}
+#app:not(.is-map-focus) .commandbar .primary-button,
+#app:not(.is-map-focus) .commandbar .icon-button,
+#app:not(.is-map-focus) .commandbar .commandbar__actions button {
+  font-size: 12px !important;
+}
+#app:not(.is-map-focus) .commandbar .route-tab {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  gap: 4px !important;
+}
+
+/* 节点卡片：正文区域始终占满剩余高度并允许程序控制滚动。 */
+#node-detail.node-detail {
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+#node-detail .node-detail__scroll {
+  flex: 1 1 0 !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: thin !important;
+  touch-action: none !important;
+  overscroll-behavior: contain !important;
+}
+#node-detail .node-detail__copy-wrap,
+#node-detail.is-copy-expanded .node-detail__copy-wrap {
+  max-height: none !important;
+  overflow: visible !important;
+}
+#node-detail .node-detail__copy-wrap p {
+  padding-bottom: 22px !important;
+}

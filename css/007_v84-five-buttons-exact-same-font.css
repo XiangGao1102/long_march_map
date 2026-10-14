@@ -1,0 +1,40 @@
+
+/* V84：只修正顶栏五个文字按钮字号，其他布局与功能完全不变。
+   原因：旧版 v76-fit/v76-stack 对 #route-toggle 使用了更高优先级的动态字号，
+   导致“生成路线/隐藏路线”视觉上仍比四个路线按钮小。 */
+#app:not(.is-map-focus) .commandbar #route-toggle,
+#app:not(.is-map-focus) .commandbar.v76-fit #route-toggle,
+#app:not(.is-map-focus) .commandbar.v76-stack #route-toggle,
+#app:not(.is-map-focus) .commandbar .route-tab,
+#app:not(.is-map-focus) .commandbar.v76-fit .route-tab,
+#app:not(.is-map-focus) .commandbar.v76-stack .route-tab,
+#app:not(.is-map-focus) .commandbar #route-toggle span,
+#app:not(.is-map-focus) .commandbar.v76-fit #route-toggle span,
+#app:not(.is-map-focus) .commandbar.v76-stack #route-toggle span,
+#app:not(.is-map-focus) .commandbar .route-tab span,
+#app:not(.is-map-focus) .commandbar.v76-fit .route-tab span,
+#app:not(.is-map-focus) .commandbar.v76-stack .route-tab span {
+  font-size: 15px !important;
+  line-height: 1 !important;
+  font-weight: 630 !important;
+  letter-spacing: 0 !important;
+  white-space: nowrap !important;
+}
+
+/* 窄屏时五个按钮仍然同步缩小，绝不出现“生成路线”单独变小。 */
+@media (max-width: 880px), (max-height: 520px) {
+  #app:not(.is-map-focus) .commandbar #route-toggle,
+  #app:not(.is-map-focus) .commandbar.v76-fit #route-toggle,
+  #app:not(.is-map-focus) .commandbar.v76-stack #route-toggle,
+  #app:not(.is-map-focus) .commandbar .route-tab,
+  #app:not(.is-map-focus) .commandbar.v76-fit .route-tab,
+  #app:not(.is-map-focus) .commandbar.v76-stack .route-tab,
+  #app:not(.is-map-focus) .commandbar #route-toggle span,
+  #app:not(.is-map-focus) .commandbar.v76-fit #route-toggle span,
+  #app:not(.is-map-focus) .commandbar.v76-stack #route-toggle span,
+  #app:not(.is-map-focus) .commandbar .route-tab span,
+  #app:not(.is-map-focus) .commandbar.v76-fit .route-tab span,
+  #app:not(.is-map-focus) .commandbar.v76-stack .route-tab span {
+    font-size: 14px !important;
+  }
+}

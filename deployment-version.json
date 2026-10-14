@@ -1,0 +1,15 @@
+{
+  "release": "performance-20261011-b0a336118dae",
+  "entry": "index_fast_20261011.html",
+  "script": "js/001.fullscreen-4d1bac760efe.js",
+  "manifest": "manifest.fast-e9525b3f3642.webmanifest",
+  "fullscreen": "native fullscreen on trusted clicks when supported; standalone home-screen entry for iPhone",
+  "nodes": 43,
+  "wordImages": 37,
+  "panelScript": "js/005.panel-cf4320c565cb.js",
+  "fix": "Reduce repeated DOM updates and warm lightweight history card images",
+  "coreScript": "js/007.fast-5afd66526328.js",
+  "immersiveScript": "js/019.fast-9492ae823480.js",
+  "localLoader": "js/000.local-loader-b7b83b50b5b5.js",
+  "localTextures": "js/000.local-textures-6c4baa817ae8.js"
+}

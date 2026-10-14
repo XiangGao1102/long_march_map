@@ -1,0 +1,8 @@
+
+/* V85：仅增强左侧“展开导航栏”入口，其余界面保持不变。 */
+.v85-nav-expand-label {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .04em !important;
+  opacity: 1 !important;
+}

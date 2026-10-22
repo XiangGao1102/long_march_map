@@ -1,0 +1,70 @@
+/* Mobile-first topbar repair: preserve the supplied logo and red-star link on narrow screens. */
+@media (max-width: 700px), (max-height: 520px) {
+  #app .commandbar,
+  #app .commandbar.v76-fit,
+  #app .commandbar.v76-stack {
+    display: grid !important;
+    box-sizing: border-box !important;
+    grid-template-columns: minmax(0, 1fr) max-content !important;
+    grid-template-rows: 34px 32px !important;
+    column-gap: 6px !important;
+    row-gap: 4px !important;
+    height: auto !important;
+    min-height: 74px !important;
+    padding: 5px 7px !important;
+    align-items: center !important;
+    overflow: visible !important;
+  }
+  #app .commandbar .brand-lockup--image {
+    display: flex !important;
+    grid-column: 1 !important; grid-row: 1 !important;
+    width: auto !important; max-width: 100% !important; min-width: 0 !important;
+    height: 32px !important; overflow: visible !important;
+    visibility: visible !important; opacity: 1 !important;
+    position: relative !important; z-index: 20 !important;
+  }
+  #app .commandbar .brand-lockup--image > img {
+    display: block !important;
+    width: clamp(118px, 34vw, 170px) !important;
+    max-width: 100% !important; height: auto !important; max-height: 32px !important;
+    object-fit: contain !important; object-position: left center !important;
+    visibility: visible !important; opacity: 1 !important;
+  }
+  #app .commandbar .commandbar__actions {
+    display: flex !important;
+    grid-column: 2 !important; grid-row: 1 !important;
+    min-width: 0 !important; max-width: 100% !important; width: max-content !important;
+    gap: 4px !important; justify-self: end !important; align-items: center !important;
+    overflow: visible !important; position: relative !important; z-index: 30 !important;
+  }
+  #app .commandbar .red-star-china-button,
+  #app .commandbar #red-star-china-link {
+    display: inline-flex !important; visibility: visible !important; opacity: 1 !important;
+    flex: 0 0 auto !important; position: relative !important; z-index: 99999 !important;
+    pointer-events: auto !important; min-height: 30px !important;
+    padding: 5px 7px !important; font-size: clamp(10px, 2.6vw, 12px) !important;
+    line-height: 1.15 !important; white-space: nowrap !important;
+  }
+  #app .commandbar #route-toggle { min-height: 30px !important; padding: 5px 7px !important; }
+  #app .commandbar .route-switch {
+    display: flex !important;
+    grid-column: 1 / -1 !important; grid-row: 2 !important;
+    width: 100% !important; max-width: 100% !important; min-width: 0 !important;
+    height: 30px !important; min-height: 30px !important; margin: 0 !important;
+    padding: 0 !important; overflow: hidden !important; position: relative !important; z-index: 10 !important;
+  }
+  #app .commandbar .route-tab {
+    display: inline-flex !important; flex: 1 1 0 !important; min-width: 0 !important;
+    width: auto !important; height: 28px !important; padding: 0 2px !important;
+    gap: 2px !important; overflow: hidden !important; justify-content: center !important;
+  }
+  #app .commandbar .route-tab span {
+    display: inline !important; min-width: 0 !important; font-size: clamp(9px, 2.2vw, 11px) !important;
+    line-height: 1 !important; white-space: nowrap !important; letter-spacing: 0 !important;
+  }
+}
+@media (max-width: 380px) {
+  #app .commandbar .brand-lockup--image > img { width: 108px !important; }
+  #app .commandbar .red-star-china-button,
+  #app .commandbar #red-star-china-link { padding-left: 5px !important; padding-right: 5px !important; font-size: 10px !important; }
+}

@@ -1,0 +1,23 @@
+/* Mobile-only final spacing fix: remove duplicate horizontal separator and keep the node panel below the header. */
+@media (max-width: 900px) {
+  #app .commandbar,
+  #app .commandbar.v76-fit,
+  #app .commandbar.v76-stack {
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+    outline: 0 !important;
+    margin-bottom: 14px !important;
+  }
+  #app .commandbar::before,
+  #app .commandbar::after {
+    box-shadow: none !important;
+  }
+  #app #node-detail.node-detail {
+    top: calc(max(6px, env(safe-area-inset-top)) + var(--portrait-header-height, 96px) + 12px) !important;
+  }
+}
+@media (max-width: 900px) and (orientation: landscape) {
+  #app #node-detail.node-detail {
+    top: calc(max(4px, env(safe-area-inset-top)) + var(--mobile-header-height, 86px) + 12px) !important;
+  }
+}

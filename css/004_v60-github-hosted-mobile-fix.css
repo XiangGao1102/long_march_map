@@ -1,0 +1,28 @@
+
+/* V60 — hosted/mobile viewport compatibility fix.
+   Keep V59 UI unchanged; only correct CSS-rotated portrait viewport units and touch scrolling. */
+html.force-css-landscape .left-rail,
+html.force-css-landscape .left-rail .route-overview__nodes ol,
+html.force-css-landscape .node-detail {
+  touch-action: pan-y !important;
+  -webkit-overflow-scrolling: touch !important;
+  overscroll-behavior: contain !important;
+}
+
+html.force-css-landscape .left-rail {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* In CSS-rotated portrait mode, vw is still the physical portrait width.
+   Use the effective landscape width computed by V44/V59 instead. */
+html.force-css-landscape .node-detail {
+  width: min(calc(var(--lm-landscape-width) * 0.28), 236px) !important;
+  left: auto !important;
+}
+
+/* Keep the expanded route list scrollable on hosted mobile browsers. */
+html.force-css-landscape .left-rail .route-overview.is-nodes-expanded .route-overview__nodes ol {
+  overflow-y: auto !important;
+  touch-action: pan-y !important;
+}

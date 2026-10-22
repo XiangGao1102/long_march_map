@@ -1,0 +1,37 @@
+/* 微调：放大“隐藏/生成路线”和“红星照耀中国”字号，并统一为适度圆角。 */
+#app .commandbar #route-toggle,
+#app .commandbar.v76-fit #route-toggle,
+#app .commandbar.v76-stack #route-toggle,
+#app .commandbar .red-star-china-button {
+  border-radius: 5px !important;
+  min-height: 34px;
+  box-sizing: border-box;
+}
+#app .commandbar #route-toggle span,
+#app .commandbar.v76-fit #route-toggle span,
+#app .commandbar.v76-stack #route-toggle span {
+  font-size: clamp(13px, 1.12vw, 15px) !important;
+  line-height: 1.15 !important;
+  white-space: nowrap !important;
+}
+#app .commandbar .red-star-china-button {
+  font-size: clamp(13px, 1.12vw, 15px) !important;
+  line-height: 1.15 !important;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+@media (max-width: 520px), (max-height: 520px) {
+  #app .commandbar #route-toggle span,
+  #app .commandbar.v76-fit #route-toggle span,
+  #app .commandbar.v76-stack #route-toggle span,
+  #app .commandbar .red-star-china-button {
+    font-size: clamp(11px, 2.8vw, 13px) !important;
+  }
+  #app .commandbar #route-toggle,
+  #app .commandbar.v76-fit #route-toggle,
+  #app .commandbar.v76-stack #route-toggle,
+  #app .commandbar .red-star-china-button {
+    border-radius: 5px !important;
+    min-height: 30px;
+  }
+}

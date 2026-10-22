@@ -1,0 +1,17 @@
+{
+  "release": "single-entry-20261014-43a6ce7e3cba",
+  "entry": "index.html",
+  "script": "js/001.fullscreen-4d1bac760efe.js",
+  "manifest": "manifest.clean-c52d2036b05f.webmanifest",
+  "fullscreen": "native fullscreen on trusted clicks when supported; standalone home-screen entry for iPhone",
+  "nodes": 43,
+  "wordImages": 37,
+  "panelScript": "js/005.panel-cf4320c565cb.js",
+  "fix": "Only one complete index.html entry; obsolete redirect HTML files removed; application assets unchanged",
+  "coreScript": "js/007.markers-5f6e7f979e45.js",
+  "immersiveScript": "js/019.fast-9492ae823480.js",
+  "localLoader": "js/000.local-loader-b7b83b50b5b5.js",
+  "localTextures": "js/000.local-textures-6c4baa817ae8.js",
+  "guideStyle": "css/045.markers-dead96d49473.css",
+  "titleLink": "https://www.bing.com/search?q=KIMI&filters=ufn%3a%22KIMI%22+sid%3a%22d1d22079-4e16-0faf-d9e8-c11ec7e96567%22&asbe=HS&qs=MB&pq=kimi&sc=12-4&cvid=53AF2A6946D048EE927F8AC0FE890C5D&FORM=QBRE&sp=1&lq=0"
+}

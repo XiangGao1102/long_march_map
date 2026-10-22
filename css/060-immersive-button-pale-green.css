@@ -1,0 +1,10 @@
+/* Pale-green accent for the immersive 2D route-map button only. */
+html body #app .commandbar .commandbar__actions #fullscreen-toggle {
+  background: #a9d9b8 !important;
+  border-color: #bfe7ca !important;
+  color: #173f27 !important;
+  box-shadow: 0 0 14px rgba(169, 217, 184, 0.22) !important;
+}
+html body #app .commandbar .commandbar__actions #fullscreen-toggle svg {
+  stroke: currentColor !important;
+}

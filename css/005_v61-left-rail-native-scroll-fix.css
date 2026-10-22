@@ -1,0 +1,30 @@
+
+/* V61 — only fix hosted-mobile left rail touch scrolling.
+   The V44/V59/V60 visual layout and all map interactions remain unchanged. */
+html.force-css-landscape body {
+  /* V44 used touch-action:none here. That ancestor rule prevents descendants
+     from starting native scrolling on several mobile browsers. */
+  touch-action: auto !important;
+}
+
+/* Keep Three.js gestures exactly as before. */
+html.force-css-landscape #scene,
+html.force-css-landscape #scene canvas {
+  touch-action: none !important;
+}
+
+/* The app is rotated 90deg in portrait fallback, therefore a visual vertical
+   swipe may be reported on either physical axis. Permit both axes; overflow-y
+   still makes the rail itself scroll only vertically in its local coordinate system. */
+html.force-css-landscape .left-rail,
+html.force-css-landscape .left-rail * {
+  touch-action: pan-x pan-y !important;
+}
+
+html.force-css-landscape .left-rail {
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  overscroll-behavior: contain !important;
+  pointer-events: auto !important;
+}

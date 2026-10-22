@@ -1,0 +1,34 @@
+/* Mobile micro-adjustment: one clean connected header border and tighter archive-panel gaps. */
+@media (max-width: 900px), (max-height: 520px) {
+  /* Keep the header outline continuous, with only one visible bottom separator. */
+  #app .commandbar,
+  #app .commandbar.v76-fit,
+  #app .commandbar.v76-stack {
+    border: 1px solid rgba(103, 190, 190, .48) !important;
+    border-bottom: 1px solid rgba(103, 190, 190, .48) !important;
+    box-shadow: none !important;
+    outline: 0 !important;
+    margin-bottom: 8px !important;
+  }
+  #app .commandbar::before,
+  #app .commandbar::after,
+  #app .commandbar.v76-fit::before,
+  #app .commandbar.v76-fit::after,
+  #app .commandbar.v76-stack::before,
+  #app .commandbar.v76-stack::after {
+    box-shadow: none !important;
+    border-bottom: 0 !important;
+    outline: 0 !important;
+  }
+  /* Bring the archive panel closer, while preserving a clear non-touching gap. */
+  #app #node-detail.node-detail {
+    top: calc(max(6px, env(safe-area-inset-top)) + var(--portrait-header-height, 96px) + 6px) !important;
+    bottom: calc(var(--v140-playback-h, 64px) + 5px) !important;
+  }
+}
+@media (max-width: 900px) and (orientation: landscape) {
+  #app #node-detail.node-detail {
+    top: calc(max(4px, env(safe-area-inset-top)) + var(--mobile-header-height, 86px) + 6px) !important;
+    bottom: calc(var(--v140-playback-h, 64px) + 5px) !important;
+  }
+}

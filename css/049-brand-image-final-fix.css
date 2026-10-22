@@ -1,0 +1,41 @@
+/* Final override: show the supplied transparent PNG as the complete brand mark. */
+.commandbar .brand-lockup--image {
+  display: flex !important;
+  flex: 0 0 auto !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  line-height: 0 !important;
+}
+.commandbar .brand-lockup--image > img {
+  display: block !important;
+  flex: 0 0 auto !important;
+  width: clamp(150px, 19vw, 235px) !important;
+  height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+@media (max-width: 700px) {
+  .commandbar .brand-lockup--image > img { width: clamp(112px, 29vw, 175px) !important; }
+}
+@media (max-width: 380px) {
+  .commandbar .brand-lockup--image > img { width: 108px !important; }
+}

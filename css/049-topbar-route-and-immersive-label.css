@@ -1,0 +1,46 @@
+/* Small top-bar refinement: route toggle follows the currently selected route color. */
+html body #app:not(.is-map-focus) .commandbar #route-toggle,
+html body #app:not(.is-map-focus) .commandbar.v76-fit #route-toggle,
+html body #app:not(.is-map-focus) .commandbar.v76-stack #route-toggle {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  background: color-mix(in srgb, var(--active-color) 72%, #081219) !important;
+  border: 1px solid color-mix(in srgb, var(--active-color) 85%, transparent) !important;
+  color: #fff !important;
+  box-shadow: 0 0 14px color-mix(in srgb, var(--active-color) 24%, transparent) !important;
+}
+
+/* Keep the immersive-map control compact, but make its purpose explicit. */
+html body #app:not(.is-map-focus) .commandbar__actions #fullscreen-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: auto !important;
+  min-width: 0 !important;
+  padding: 0 8px !important;
+  white-space: nowrap;
+  font-size: clamp(11px, 1vw, 13px) !important;
+  line-height: 1.1;
+}
+html body #app:not(.is-map-focus) .commandbar__actions #fullscreen-toggle svg {
+  flex: 0 0 auto;
+  width: 17px;
+  height: 17px;
+}
+html body #app:not(.is-map-focus) #fullscreen-toggle .immersive-map-button-label {
+  display: inline !important;
+  white-space: nowrap;
+}
+@media (max-width: 520px), (max-height: 520px) {
+  html body #app:not(.is-map-focus) .commandbar__actions #fullscreen-toggle {
+    gap: 3px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    font-size: clamp(9px, 2.4vw, 11px) !important;
+  }
+  html body #app:not(.is-map-focus) .commandbar__actions #fullscreen-toggle svg {
+    width: 14px;
+    height: 14px;
+  }
+}

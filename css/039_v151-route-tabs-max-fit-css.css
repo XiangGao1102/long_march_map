@@ -1,0 +1,17 @@
+
+/* V151：只服务四个路线选择按钮。
+   先尽量减少无意义内边距，把空间优先留给文字。 */
+#app:not(.is-map-focus) .commandbar .route-switch .route-tab {
+  padding-left: 1px !important;
+  padding-right: 1px !important;
+  gap: 2px !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+#app:not(.is-map-focus) .commandbar .route-switch .route-tab span {
+  display: block !important;
+  min-width: 0 !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}

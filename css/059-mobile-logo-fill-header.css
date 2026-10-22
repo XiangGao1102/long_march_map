@@ -1,0 +1,43 @@
+/* Mobile-only: enlarge the supplied transparent logo and minimize top/bottom whitespace. */
+@media (max-width: 900px) {
+  #app .commandbar .brand-lockup--image {
+    height: 56px !important;
+    min-height: 56px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    align-self: center !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  #app .commandbar .brand-lockup--image > img {
+    width: clamp(188px, 50vw, 258px) !important;
+    max-height: 56px !important;
+    height: 56px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+}
+@media (max-width: 420px) {
+  #app .commandbar .brand-lockup--image {
+    height: 53px !important;
+    min-height: 53px !important;
+  }
+  #app .commandbar .brand-lockup--image > img {
+    width: 172px !important;
+    max-height: 53px !important;
+    height: 53px !important;
+  }
+}
+@media (max-width: 360px) {
+  #app .commandbar .brand-lockup--image {
+    height: 50px !important;
+    min-height: 50px !important;
+  }
+  #app .commandbar .brand-lockup--image > img {
+    width: 160px !important;
+    max-height: 50px !important;
+    height: 50px !important;
+  }
+}

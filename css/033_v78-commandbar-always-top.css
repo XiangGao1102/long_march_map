@@ -1,0 +1,18 @@
+
+/* V78 — 顶栏无条件贴顶
+   目标：任何手机、任何浏览器、全屏/非全屏、原生横屏/CSS 横屏下，
+   顶栏顶部边缘始终与应用可视区域顶部重合，不保留额外视觉空隙。 */
+#app:not(.is-map-focus) .commandbar,
+html.force-css-landscape #app:not(.is-map-focus) .commandbar {
+  top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* 顶部不再使用 safe-area 作为外边距；
+   刘海/状态栏差异只由顶栏内部内容和浏览器可视区域处理。 */
+@supports (top: env(safe-area-inset-top)) {
+  #app:not(.is-map-focus) .commandbar,
+  html.force-css-landscape #app:not(.is-map-focus) .commandbar {
+    top: 0 !important;
+  }
+}

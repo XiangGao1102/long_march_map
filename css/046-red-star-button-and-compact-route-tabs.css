@@ -1,0 +1,21 @@
+/* 新增“红星照耀中国”入口，并压缩路线切换按钮的水平留白。 */
+#app .commandbar .route-switch { min-width: 0 !important; gap: clamp(1px, .25vw, 4px) !important; }
+#app .commandbar .route-tab { box-sizing: border-box !important; min-width: 0 !important; padding-inline: clamp(2px, .32vw, 5px) !important; gap: 2px !important; }
+#app .commandbar .route-tab span { white-space: nowrap !important; letter-spacing: 0 !important; font-size: clamp(10px, 1.02vw, 13px) !important; line-height: 1.15 !important; }
+#app .commandbar .route-tab i { flex: 0 0 4px !important; width: 4px !important; height: 4px !important; }
+#app .commandbar__actions { min-width: 0 !important; gap: clamp(3px, .4vw, 7px) !important; }
+#app .commandbar .red-star-china-button {
+ display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center;
+ box-sizing: border-box; min-height: 34px; padding: 7px clamp(6px, .65vw, 10px);
+ border: 1px solid #ffb0b0; border-radius: 7px; background: #e60012; color: #fff;
+ font-family: inherit; font-size: clamp(11px, 1vw, 14px); font-weight: 750;
+ line-height: 1.15; letter-spacing: 0; white-space: nowrap; text-decoration: none;
+ box-shadow: 0 2px 8px rgba(180, 0, 15, .28); -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+}
+#app .commandbar .red-star-china-button:hover { background: #c90010; }
+#app .commandbar .red-star-china-button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+@media (max-width: 520px), (max-height: 520px) {
+ #app .commandbar .route-tab { padding-inline: 2px !important; gap: 1px !important; }
+ #app .commandbar .route-tab span { font-size: clamp(9px, 2.25vw, 11px) !important; }
+ #app .commandbar .red-star-china-button { padding: 6px 5px; font-size: clamp(10px, 2.5vw, 12px); min-height: 30px; }
+}

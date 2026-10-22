@@ -1,0 +1,5 @@
+
+.route-overview__meta > span > small,
+.route-overview__stats > span > small {
+  font-size: 12px !important;
+}

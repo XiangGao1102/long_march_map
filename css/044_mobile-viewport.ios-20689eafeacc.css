@@ -1,0 +1,139 @@
+/* A shared logical landscape canvas for the map, guide, and immersive view. */
+html[data-lm-mobile="true"] {
+  --lm-safe-left: env(safe-area-inset-left, 0px);
+  --lm-safe-right: env(safe-area-inset-right, 0px);
+  --lm-safe-top: env(safe-area-inset-top, 0px);
+  --lm-safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+html[data-lm-mobile="true"].force-css-landscape {
+  --lm-safe-left: env(safe-area-inset-top, 0px);
+  --lm-safe-right: env(safe-area-inset-bottom, 0px);
+  --lm-safe-top: env(safe-area-inset-right, 0px);
+  --lm-safe-bottom: env(safe-area-inset-left, 0px);
+}
+html[data-lm-mobile="true"],
+html[data-lm-mobile="true"] body {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  overscroll-behavior: none;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+html[data-lm-mobile="true"] body {
+  position: fixed !important;
+  inset: 0 !important;
+}
+html[data-lm-mobile="true"] body #app,
+html[data-lm-mobile="true"] body #lm-three-step-guide,
+html[data-lm-mobile="true"] body #immersive-map-experience {
+  position: fixed !important;
+  left: var(--lm-viewport-center-x) !important;
+  top: var(--lm-viewport-center-y) !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: var(--lm-landscape-width) !important;
+  height: var(--lm-landscape-height) !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  transform: translate(-50%, -50%) rotate(var(--lm-viewport-rotation)) !important;
+  transform-origin: 50% 50% !important;
+  box-sizing: border-box;
+}
+html[data-lm-mobile="true"] body #app {
+  overflow: hidden !important;
+  contain: layout paint;
+}
+html[data-lm-mobile="true"] #scene,
+html[data-lm-mobile="true"] #scene canvas,
+html[data-lm-mobile="true"] #labels-layer,
+html[data-lm-mobile="true"] #terrain-labels {
+  width: 100% !important;
+  height: 100% !important;
+}
+#mobile-fullscreen-prompt { display: none !important; }
+html[data-lm-mobile="true"] #playback .playback__main { min-height: 0 !important; }
+html[data-lm-mobile="true"] #progress-track::before,
+html[data-lm-mobile="true"] #progress-track::after { pointer-events: none; }
+
+html[data-lm-mobile="true"] #lm-three-step-guide {
+  overflow: hidden;
+  contain: layout paint;
+}
+html[data-lm-mobile="true"] #lm-three-step-guide .lm-guide-card {
+  width: min(350px, calc(var(--lm-landscape-width) - 28px)) !important;
+  max-height: calc(var(--lm-landscape-height) - 24px) !important;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+html[data-lm-mobile="true"] .lm-guide-card__eyebrow,
+html[data-lm-mobile="true"] .lm-guide-card h2,
+html[data-lm-mobile="true"] .lm-guide-card__lead,
+html[data-lm-mobile="true"] .lm-guide-card__footer {
+  flex-shrink: 0;
+}
+html[data-lm-mobile="true"] .lm-guide-card__items {
+  min-height: 0;
+  grid-auto-rows: max-content;
+  align-content: start;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+html[data-lm-mobile="true"][data-lm-small-height="true"] #lm-three-step-guide .lm-guide-card {
+  padding: 10px 14px !important;
+}
+html[data-lm-mobile="true"][data-lm-small-height="true"] .lm-guide-card h2 { font-size: 19px !important; }
+html[data-lm-mobile="true"][data-lm-small-height="true"] .lm-guide-card__lead {
+  font-size: 11px !important;
+  margin: 4px 0 6px !important;
+}
+html[data-lm-mobile="true"][data-lm-small-height="true"] .lm-guide-card__item {
+  min-height: 28px !important;
+  padding: 3px 7px !important;
+}
+
+html[data-lm-mobile="true"] #immersive-map-experience {
+  grid-template-rows: minmax(0, 1fr) !important;
+  transition: opacity 260ms ease, visibility 0s linear 360ms !important;
+  padding: var(--lm-safe-top) var(--lm-safe-right) var(--lm-safe-bottom) var(--lm-safe-left);
+}
+html[data-lm-mobile="true"] #immersive-map-experience.is-open { transition-delay: 0s !important; }
+html[data-lm-mobile="true"] #immersive-map-experience .im-landscape-guard { display: none !important; }
+html[data-lm-mobile="true"] #immersive-map-experience .im-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.9fr) minmax(220px, .92fr) !important;
+  grid-template-rows: minmax(0, 1fr) !important;
+  min-width: 0;
+  min-height: 0;
+}
+html[data-lm-mobile="true"] #immersive-map-experience .im-lyrics-column {
+  grid-template-rows: 54px minmax(0, 1fr) auto;
+}
+html[data-lm-mobile="true"] #immersive-map-experience .im-lyrics-head {
+  display: flex !important;
+  padding: 7px 9px 7px 12px;
+}
+html[data-lm-mobile="true"] #immersive-map-experience .im-lyrics-head h2 { font-size: 15px; }
+html[data-lm-mobile="true"] #immersive-map-experience .im-close { width: 34px; height: 34px; }
+html[data-lm-mobile="true"] #immersive-map-experience .im-lyrics-list {
+  padding: calc(var(--lm-landscape-height) * .33) 11px;
+}
+html[data-lm-mobile="true"] #immersive-map-experience .im-lyric { display: block; margin-bottom: 19px; }
+html[data-lm-mobile="true"] #immersive-map-experience .im-lyric__text { font-size: 14px; line-height: 1.5; }
+html[data-lm-mobile="true"] #immersive-map-experience .im-player { padding: 8px 10px; }
+html[data-lm-mobile="true"] #immersive-map-experience .im-progress { margin-bottom: 7px; }
+html[data-lm-mobile="true"] #immersive-map-experience .im-play { width: 32px; height: 32px; }
+html[data-lm-mobile="true"] #immersive-map-experience .im-player__time { font-size: 9px; margin: 0; }
+html[data-lm-mobile="true"] #immersive-map-experience .im-suno-link { font-size: 9px; }
+html[data-lm-mobile="true"] #immersive-map-experience .im-scene-card { left: 10px; bottom: 10px; padding: 7px 9px; }
+html[data-lm-mobile="true"] #immersive-map-experience .im-scene-card__title { font-size: 14px; }
+html[data-lm-mobile="true"] #immersive-map-experience .im-scene-card__region { margin-top: 3px; font-size: 10px; }
+html[data-lm-mobile="true"] #immersive-map-experience .im-map-tools { right: 10px; bottom: 10px; }
+html[data-lm-mobile="true"] #immersive-map-experience .im-map-tool { width: 32px; height: 32px; }

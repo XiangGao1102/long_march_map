@@ -1,0 +1,22 @@
+/* Display the user's original transparent PNG without cropping. */
+.commandbar .brand-lockup--image {
+  display:flex !important; align-items:center !important; justify-content:flex-start !important;
+  flex:0 0 auto !important; width:auto !important; min-width:0 !important; max-width:none !important;
+  height:auto !important; margin:0 !important; padding:0 !important; overflow:visible !important;
+  background:transparent !important; border:0 !important; box-shadow:none !important;
+  position:relative !important; z-index:20 !important; line-height:0 !important;
+}
+.commandbar .brand-lockup--image > img {
+  display:block !important; width:clamp(150px, 19vw, 235px) !important; height:auto !important;
+  max-width:none !important; object-fit:contain !important; object-position:left center !important;
+}
+#app .commandbar #red-star-china-link {
+  position:relative !important; z-index:99999 !important; pointer-events:auto !important;
+  cursor:pointer !important; touch-action:manipulation !important;
+}
+@media (max-width:700px) {
+  .commandbar .brand-lockup--image > img { width:clamp(112px, 29vw, 175px) !important; }
+}
+@media (max-width:380px) {
+  .commandbar .brand-lockup--image > img { width:108px !important; }
+}

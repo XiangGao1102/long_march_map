@@ -1,0 +1,30 @@
+/* Mobile-only refinement: balance the node archive panel against header and playback,
+   and reduce the timeline footer height while keeping a small visible separation. */
+html[data-lm-mobile="true"] {
+  --v140-playback-h: 56px;
+}
+html[data-lm-mobile="true"] #app:not(.is-map-focus) .playback {
+  height: 56px !important;
+  min-height: 56px !important;
+  padding-top: 5px !important;
+  padding-bottom: 4px !important;
+  box-sizing: border-box !important;
+}
+html[data-lm-mobile="true"] #app:not(.is-map-focus) #node-detail.node-detail {
+  top: calc(var(--v140-header-h, 56px) + 6px) !important;
+  bottom: calc(var(--v140-playback-h, 56px) + 5px) !important;
+}
+/* Fallback for mobile-sized browser viewports where the mobile marker is unavailable. */
+@media (max-width: 900px), (max-height: 520px) {
+  #app:not(.is-map-focus) .playback {
+    height: 56px !important;
+    min-height: 56px !important;
+    padding-top: 5px !important;
+    padding-bottom: 4px !important;
+    box-sizing: border-box !important;
+  }
+  #app:not(.is-map-focus) #node-detail.node-detail {
+    top: calc(var(--v140-header-h, 56px) + 6px) !important;
+    bottom: calc(var(--v140-playback-h, 64px) + 5px) !important;
+  }
+}

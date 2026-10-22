@@ -1,0 +1,27 @@
+/* Only adjust the top-bar generate/hide route button.
+   Keep it compact and use one constant pale-green appearance regardless of selected route. */
+html body #app:not(.is-map-focus) .commandbar #route-toggle,
+html body #app:not(.is-map-focus) .commandbar.v76-fit #route-toggle,
+html body #app:not(.is-map-focus) .commandbar.v76-stack #route-toggle {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+  gap: 0 !important;
+  background: #a9d9b8 !important;
+  border-color: #bfe7ca !important;
+  color: #173f27 !important;
+  box-shadow: 0 0 14px rgba(169, 217, 184, 0.22) !important;
+}
+
+html body #app:not(.is-map-focus) .commandbar #route-toggle span,
+html body #app:not(.is-map-focus) .commandbar.v76-fit #route-toggle span,
+html body #app:not(.is-map-focus) .commandbar.v76-stack #route-toggle span {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+}
